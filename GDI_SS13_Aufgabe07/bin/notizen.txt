@@ -1,0 +1,75 @@
+FitPlusUI
+- zeigeMenu
+- showMitglieder(sortierung)
+- showAbteilungsmitglieder(abteilung, sortierung)
+- showEinnahmen()
+- showVorausschau()
+
+FitPlusUIMobile
+- showMenu
+- showMitglieder(sortierung)
+- showAbteilungsmitglieder(abteilung ,sortierung)
+- showEinnahmen()
+- showVorausschau()
+
+FitPlus
+- sportabteilungen
+- grundbeitrag
+- berechneEinnahmen(offset)
+- bucheGebuehrenAb()
+- getMitglieder(sortierung)
+ Enum Sortierung { NACHNAME, ALTER, SPORTABTEILUNG, BEITRAGSHOEHE }
+
+Mitglied
+- name
+- alter
+- bankverbindung
+- kind
+- ehepartner
+- berechneBeitrag
+- wechsleAbteilung(abteilung)
+
+AktivesMitglied
+- abteilung
+- mitgliedschaftsdauer
+- berechneBeitrag
+
+Sportabteilung
+- name
+- beitrag
+- altersgruppe
+- mitgliederZeigen()
+- mitgliederZeigen
+
+Enum Altersgruppe
+- min
+
+Bankverbindung
+- kontonummer
+- blz
+- bank
+
+
+Sportabteilungen:
+- Tennis
+- Schwimmen
+- Golf
+
+Liste aller aktiver undf passiver Mitglieder, sortiert nach Nachname, Alter, Zugehörigkeit zu Sportabteilungen, Beitragshöhe
+
+Zugehörigkeit ist auf bestimmte Altersgruppen beschränkt
+
+Passive Mitglieder bezahlen festen Jahresbeitrag, der 1x jährlich per Lastschrift eingezogen wird
+- ehepartner kriegt 10% rabatt auf den grundbeitrag
+- jedes kind 50%
+Aktive bezahlen zusätzlich einen Abteilungsbeitrag, den jede abteilung für sich festlegt
+ → pro jahr 5% rabatt für den jeweiligen abteilungsbeitrag
+ → ab 20 jahren ist die Mitgliedschaft in einer Abteilung kostenlos
+
+Überblick über die jährlichen einnahmen
+- Vorrausschau auf die kommenden 5 Jahre
+
+jede abteilung braucht eine Liste aller Abteilungsmitglieder
+
+
+Handys und PDAs lauffähigkeit

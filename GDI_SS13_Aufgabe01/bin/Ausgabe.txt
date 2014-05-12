@@ -1,0 +1,6 @@
+Beladene Fahrzeuge: 1x Fahrrad / 3x Lkw / 1x Pkw / 6x Motorrad
+Aktuelle Nutzflaeche: 393 m2
+Aktuelles Nutzgewicht: 48895 kg
+Durchschnittliche Nutzfläche: 35 m2
+Durchschnittliche Nutzgewicht: 4445 kg
+Anzahl Fahrzeuge (Prognose): 492

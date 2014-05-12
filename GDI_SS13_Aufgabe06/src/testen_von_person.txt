@@ -1,0 +1,35 @@
+Jan Holthuis = 11 Zeichen
+
+Hinweis:
+Dies sind Tabellen mit den Äquivalenzklassen bzw. den Testfällen.
+Zum fehlerfreien Betrachten bitte automatischen Zeilenumbruch deaktiveren
+und eine dicktengleiche Schrift verwenden.
+Die Breite der Tabellen beträgt maximal 101 Zeichen.
+
+----------------------------------------------------------------------------
+| Eingabe          | gültige Äquivalenzklasse | ungültige Äquivalenzklasse |
+----------------------------------------------------------------------------
+| Konstruktor      |                          |                            |
+|   name           | 1: 2<name.length()<11    | 2: name.length()<=2        |
+|                  |                          | 3: name.length()>=11       |
+|   plz            | 4: 10000<=plz<100000     | 5: plz<10000               |
+|                  |                          | 6: plz>=100000             |
+----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------
+| Testfälle             | A     | B          | C             | D             | E       | F          |
+| geteste Äqui.-Klassen | 1U,4U | 1O,4O      | 2O,4U         | 3U,4O         | 1U, 5O  | 1O, 6U     |
+-----------------------------------------------------------------------------------------------------
+| Person()              |       |            |               |               |         |            |
+|   name                | ABC   | ABCDEFGHIJ | AB            | ABCDEFGHIJK   | ABC     | ABCDEFGHIJ |
+|   plz                 | 10000 | 12345      | 10000         | 99999         | 9999    | 100000     |
+-----------------------------------------------------------------------------------------------------
+| anschl. Ausführung    | ABC   | ABCDEFGHIJ | Fehler:       | Fehler:       | Fehler: | Fehler:    |
+| von getName()         |       |            | name.length() | name.length() | plz <   | plz >=     |
+|                       |       |            | <= 2          | >= 11         | 10000   | 100000     |
+-----------------------------------------------------------------------------------------------------
+
+Anmerkung: In der Aufgabe stand, der "Name einer Person muss zwischen 2 und X Zeichen lang sein"
+(X ist hier 11). Mir war nicht ganz klar, ob hier die Länge inklusive 2 und 11 gemeint ist, oder
+exklusive. Mathematisch gesehen erschien mir letzteres richtig. Ich hoffe, das ist auch gemeint
+gewesen.

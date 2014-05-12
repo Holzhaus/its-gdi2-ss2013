@@ -1,0 +1,9 @@
+Die Klasse "Bezahlung" besitzt im obigen Beispiel keine starke Bindung, da sie mehrere verschiedene Bezahlungsarten implementiert und dadurch viele Attribute besitzt, von denen jeweils nur wenige relevante Daten enthalten.
+(Beispiel: Wenn per Rechnung gezahlt wird, sind die Attribute "kreditinstitut", "kreditkartennummer", "kontonummer", "blz", "bank" sowie die drei Attribute, der zur Unterscheidung der Zahlungsart verwendet werden ("kreditkarte", "rechnung", "bankeinzug") nur unnötiger Datenballast.)
+
+Ich, Jan Holthuis, schlage folgende Verbesserung vor:
+Es ist sinnvoller, "Rechnung", "Kreditkarte" und "Bankeinzug" als eigene Klassen zu implementieren, wobei "Bezahlung" dann das Interface oder die (abstrakte) Überklasse wäre.
+
+Ich habe mich in meinem Entwurf für die Version mit der abtrakten Überklasse entschieden, da nicht ganz klar war, ob es nicht dennoch gemeinsame Methoden geben könnte.
+
+Ebenso war mich nicht ganz klar, zu welcher Zahlungart das Attribut "gebuehr" gehört, daher habe ich sie als protected Attribut von Bezahlung eingerichtet, da ja bei allen Zahlungarten Gebühren für den Online-Shop anfallen könnten.

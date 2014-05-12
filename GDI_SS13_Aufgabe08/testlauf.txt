@@ -1,0 +1,64 @@
+Zuvor gespeicherte Trainingsdaten gefunden!
+Wollen Sie die Daten laden? [j,N]
+j
+Alte Daten geladen!
+-------------------------------------------
+Bitte Funktion auswählen: 
+1: Trainingstag erfassen 
+2: Liste aller Trainingstage 
+3: Programm beenden und Daten speichern 
+Abbruch: 9 
+Bitte Ziffer 1, 2, 3 oder 9 eingeben: 2
+-------------------------------------------
+Tag | Gewichte                                Gesamtgewicht Durchschnittsgewicht
+----|---------------------------------------------------------------------------
+ 11 | 500 330 432 346 234 122  80 490 340 120          2994                299,0
+122 |  10  40  10 400  50  90  70  80 500 100          1350                135,0
+123 |  10 200  30  40  50  60  70  80 548 100          1188                118,0
+
+Anzahl Trainingstage: 3
+Durchschnittsgewicht aller Trainingstage: 184,0
+Max Durchschnittsgewicht: 299,0
+Min Durchschnittsgewicht: 118,0
+Tendenz aller Trainingstage: -
+-------------------------------------------
+Bitte Funktion auswählen: 
+1: Trainingstag erfassen 
+2: Liste aller Trainingstage 
+3: Programm beenden und Daten speichern 
+Abbruch: 9 
+Bitte Ziffer 1, 2, 3 oder 9 eingeben: 1
+-------------------------------------------
+Geben Sie bitte den Tag des Jahres und anschl. alle 10 Gewichte, jeweils getrennt durch ein Leerzeichen ein: 
+124 500 450 400 350 300 250 200 150 100 50
+-------------------------------------------
+Bitte Funktion auswählen: 
+1: Trainingstag erfassen 
+2: Liste aller Trainingstage 
+3: Programm beenden und Daten speichern 
+Abbruch: 9 
+Bitte Ziffer 1, 2, 3 oder 9 eingeben: 2
+-------------------------------------------
+Tag | Gewichte                                Gesamtgewicht Durchschnittsgewicht
+----|---------------------------------------------------------------------------
+ 11 | 500 330 432 346 234 122  80 490 340 120          2994                299,0
+122 |  10  40  10 400  50  90  70  80 500 100          1350                135,0
+123 |  10 200  30  40  50  60  70  80 548 100          1188                118,0
+124 | 500 450 400 350 300 250 200 150 100  50          2750                275,0
+
+Anzahl Trainingstage: 4
+Durchschnittsgewicht aller Trainingstage: 206,8
+Max Durchschnittsgewicht: 299,0
+Min Durchschnittsgewicht: 118,0
+Tendenz aller Trainingstage: -
+-------------------------------------------
+Bitte Funktion auswählen: 
+1: Trainingstag erfassen 
+2: Liste aller Trainingstage 
+3: Programm beenden und Daten speichern 
+Abbruch: 9 
+Bitte Ziffer 1, 2, 3 oder 9 eingeben: 3
+-------------------------------------------
+Speichere Daten in Datei 'data.ser'...
+Daten gespeichert.
+Auf Wiedersehen!

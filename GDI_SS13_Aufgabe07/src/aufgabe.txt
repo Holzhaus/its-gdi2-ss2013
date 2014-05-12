@@ -1,0 +1,37 @@
+PFLICHTENHEFT:
+
+Zielbestimmung
+Die Kassierer sollen mit dem Programm Mitglieder erfassen und sortiert anzeigen können. Die Leiter der einzelnen Sportabteilungen sollen mit dem Verwaltungsprogramm die Mitglieder ihrer Abteilung sortiert anzeigen können. Die Mitglieder sollen in aktive und passive Mitglieder unterschieden werden. Ebenso sollen die Einnahmen durch Beitrage für das aktuelle und die kommenden 5 Jahre berechnet werden können.
+
+Produktfunktionen
+/F10/ Ein Mitglied muss erfasst werden können.
+/F20/ Eine Sportabteilung muss erfasst werden können.
+/F30/ Eine Bankverbindung muss erfasst werden können.
+/F40/ Mitglieder können Mitglied einer Sportabteilung sein
+/F50/ Der individuelle Beitrag eines Mitglieds muss berechnet werden können: Grundbeitrag (Rabatte: 50% für Kinder, 10% für Ehepartner) + Abteilungsbeitrag (5% Rabatt pro Jahr Mitgliedschaft in Abteilung, Abteilungsbeitrag entfällt komplett ab 20 Jahren Mitgliedschaft in Abteilung)
+/F60/ Die Jahreseinnahmen durch Mitgliedsbeiträge müssen angezeigt werden könnten.
+/F70/ Eine Vorrausschau auf die Jahreseinnahmen der kommenden 5 Jahre muss angezeigt werden können.
+/F80/ Alle Mitglieder müssen nach folgenden Sortierkriterien angezeigt werden können: Nachname, Alter, Zugehörigkeit zu Sportabteilung, Beitragshöhe
+/F90/ Alle Mitglieder einer Sportabteilung müssen angezeigt werden können.
+
+Produktdaten
+/D10/ Daten für ein Mitglied:
+Name, Alter, Bankverbindung, optional: Sportabteilung, Mitgliedschaftdauer in Sportabteilung, Ehepartner eines Mitglieds
+/D20/ Daten für eine Sportabteilung:
+Name, Beitrag, Altersgruppen
+/D30/ Daten für eine Bankverbindung:
+Kontonummer, BLZ, Bank
+
+Benutzungsoberfläche
+/B10/ Textorientiert, geeignet für mobile Endgeräte wie Handys, PDAs usw.
+
+GLOSSAR:
+
+Mitglied: Mitglied bei FitPlus. Kann auch Mitglied einer →Sportabteilung sein, sonst ist es passiv. Zahlt →Gebühren.
+
+Sportabteilung: Aktive →Mitgliedern sind hier Mitglied. Kostet das Mitglied zusätzliche →Gebühren.
+
+Gebühren: Werden gezahlt durch Mitglied und setzen sich zusammen aus Grundbeitrag und Beitrag der →Sportabteilungen. Auf beides kann es Rabatte geben.
+
+BEGRÜNDUNG DES UML-DIAGRAMMS:
+Bankverbindung ist eine eigene Klasse, um eine starke Bindung herzustellen. Da ;itglieder nur durch die Abteilungszugehörigkeit unterschieden werden und jederzeit passiv werden können, hielt ich es nicht für sinnvoll, aktive und passive Mitglieder in verschiedene Subklassen von Mitglied zu unterscheiden. "kind" ist kein Attribut der Klasse Mitglied, da dies genauso gut automatisch über eine Methode getAltersgruppe dynamisch berechnet werden kann.  Für jedes Mitglied hat eine Methode, die das Berechnen der Individuellen Gebühren erlaubt, die Gesamtgebühren sowie Mitgliederlisten können über die Klasse MitgliderVerwaltung abgerufen werden. Die Benutzeroberfläche wird über FitPlusUI realisiert, ohne dort noch Berechnungen oder Sortierungen, etc. vorzunehmen, sodass ggf. alternative Ausgabeformate (JSON o.ä.) für mobile Apps in einer separaten UI-Klasse realisiert werden können, ohne Methoden redundant implementieren zu müssen. 
